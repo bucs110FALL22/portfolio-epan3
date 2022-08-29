@@ -14,4 +14,4 @@ Preferred Name: Eric
 
 Discord username: Eric Pan#7662
 
-REPL url:
+REPL url: https://replit.com/join/yeayhiwohr-ericpan7
