@@ -1,3 +1,4 @@
+##Working With Data (Part 1)
 #variables
 #* is multiply (e.g. 10 times 5)
 multiply = 10 * 5
@@ -35,3 +36,31 @@ print("10 % 10 =", modulo2)
 print("0 % 10 =", modulo3)
 #this outputs a repeating decimal
 print("10 / 15 =", divide1)
+
+##Working With Data (Part 2)
+#sets variable for fee
+fee = 3
+#asks the user to input the current exchange rate
+str_rate = input("What is the current exchange rate for Euro to Dollars?\n")
+#sets the string input as an int
+rate = float(str_rate)
+#asks the user to input how much they want to exchange
+str_amount = input("How much Euro would you like to exchange for Dollars?\n")
+#sets the string input as an int 
+amount = float(str_amount)
+#calculates the total
+total = rate * amount
+#the result is a total with a $3 fee (subtracting the $3)
+result = total - fee
+#formatting amount to ##.00 (e.g. 1.00 or 2.99)
+##may still have issues with it ask for help
+format(amount, '.2f')
+format(total, '.2f')
+format(fee, '.2f')
+format(result, '.2f')
+#outputting the exchange result without fee
+print("Exchanging", amount, "Euros = ${}".format(total))
+#system displaying message of adding $3 fee
+print("Adding the ${} fee...".format(fee))
+#outputting the final result with the fee subtracted from the total
+print("Your new total will be ${}".format(result))
