@@ -54,13 +54,15 @@ total = rate * amount
 result = total - fee
 #formatting amount to ##.00 (e.g. 1.00 or 2.99)
 ##may still have issues with it ask for help
-format(amount, '.2f')
-format(total, '.2f')
-format(fee, '.2f')
-format(result, '.2f')
+# format(amount, '.2f')
+# format(total, '.2f')
+# format(fee, '.2f')
+# format(result, '.2f')
+##(removed above formatting doesn't work)
 #outputting the exchange result without fee
-print("Exchanging", amount, "Euros = ${}".format(total))
-#system displaying message of adding $3 fee
-print("Adding the ${} fee...".format(fee))
+print("Exchanging €{:.2f}".format(amount), "= ${:.2f}".format(total))
+#system displaying message of applying $3 fee
+print("Applying the ${:.2f} fee...".format(fee))
 #outputting the final result with the fee subtracted from the total
-print("Your new total will be ${}".format(result))
+print("You will only receive ${:.2f}".format(result))
+#applied {:.2f} to limit to 2 decimal places
