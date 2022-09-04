@@ -1,6 +1,6 @@
 # CS110 Fall `22 Portfolio Repository
 
-Welcome to CS 110. I look forward to working with you this semester. This is your porfolio for the semester. All your work, besides the final project, will go into here. When you complete an assignment, you will make a commit and submit the commit hash to Brightspace.
+Welcome to CS 110. I look forward to working with you this semester. This is your portfolio for the semester. All your work, besides the final project, will go into here. When you complete an assignment, you will make a commit and submit the commit hash to Brightspace.
 
 ## Course Materials
 
@@ -14,4 +14,4 @@ Preferred Name: Eric
 
 Discord username: Eric Pan#7662
 
-REPL url: https://replit.com/join/yeayhiwohr-ericpan7
+REPL url: https://replit.com/@EricPan7
