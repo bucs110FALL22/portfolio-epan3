@@ -35,6 +35,7 @@ print("10 % 15 =", modulo1)
 print("10 % 10 =", modulo2)
 print("0 % 10 =", modulo3)
 #this outputs a repeating decimal
+#problem: it cuts off the decimal?
 print("10 / 15 =", divide1)
 
 ##Working With Data (Part 2)
