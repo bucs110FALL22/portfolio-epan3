@@ -7,12 +7,15 @@ import math
 window = turtle.Screen() # 2.  Create a screen
 window.bgcolor('lightblue')
 
+
 michelangelo = turtle.Turtle() # 3.  Create two turtles
 leonardo = turtle.Turtle()
 michelangelo.color('orange')
 leonardo.color('blue')
 michelangelo.shape('turtle')
 leonardo.shape('turtle')
+michelangelo.speed(1)
+leonardo.speed(1)
 
 michelangelo.up() # 4. Pick up the pen so we don’t get lines
 leonardo.up()
@@ -45,8 +48,14 @@ michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
 # PART B - complete part B here
 # pygame.init()
-# window = pygame.display.set_mode()
-# table = pygame.display.get_surface()
+# screen_width=700
+# screen_height=400
+# window = pygame.display.set_mode([screen_width, screen_height])
+
+# surface = pygame.display.get_surface()
+# color = "aquamarine"
+# points = [(0, 1), (10, 16), (20, 40)]
+# surface = pygame.draw.polygon(surface, color, points)
 
 # coords = [list]
 # num_sides = [int]
