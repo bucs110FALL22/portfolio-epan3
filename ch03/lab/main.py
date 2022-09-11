@@ -25,10 +25,11 @@ leonardo.goto(-100,-20)
 ## 5. Your PART A code goes here
 #generating random distance for turtles
 random_distance = random.randrange(1,100)
+random_distance1 = random.randrange(1,100)
 
 #moving turtles forward
 michelangelo.forward(random_distance)
-leonardo.forward(random_distance)
+leonardo.forward(random_distance1)
 #resetting their position
 michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
@@ -46,6 +47,7 @@ for i in [new_distance] * 10:
 #resetting their position
 michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
+
 # PART B - complete part B here
 # pygame.init()
 # screen_width=700
@@ -66,5 +68,40 @@ leonardo.goto(-100,-20)
 
 # theta = (2.0 * math.pi * side_length) / num_sides
 
+pygame.init()
+window = pygame.display.set_mode()
+window.fill((255, 255, 255))
 
-window.exitonclick()
+#drawing square
+pygame.draw.polygon(window, pygame.Color(255,0,0), [(100,100),(100,200),(200,200),(200,100)])
+
+pygame.display.update()
+pygame.time.wait(1000)
+
+#drawing circle
+window.fill("aquamarine")
+
+pygame.draw.circle(window, pygame.Color("orange"), (100,100), 50, 300)
+
+
+pygame.display.update()
+pygame.time.wait(1000)
+
+#draw triangle
+window.fill((255, 255, 255))
+# pygame.draw.polygon(window, "BLACK", [[100, 100], [0, 200], [200, 200]], 5)
+pygame.draw.polygon(window, color=("red"), points=[(50,100), (100,50), (150,100)])
+
+pygame.display.update()
+pygame.time.wait(1000)
+
+#using the code below so pygame doesn't close unless you close it
+running = True
+while running:
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      running = False
+    if running == False:
+      pygame.quit()
+
+# window.exitonclick()
