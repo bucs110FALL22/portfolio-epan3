@@ -49,53 +49,70 @@ michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
 
 # PART B - complete part B here
-# pygame.init()
-# screen_width=700
-# screen_height=400
-# window = pygame.display.set_mode([screen_width, screen_height])
-
-# surface = pygame.display.get_surface()
-# color = "aquamarine"
-# points = [(0, 1), (10, 16), (20, 40)]
-# surface = pygame.draw.polygon(surface, color, points)
-
-# coords = [list]
-# num_sides = [int]
-# side_length = [int]
-# offset = [int]
-
-# rectangle1 = pygame.Rect(10, 30, 50, 70)
-
-# theta = (2.0 * math.pi * side_length) / num_sides
-
+#setup for pygame and display
 pygame.init()
 window = pygame.display.set_mode()
-window.fill((255, 255, 255))
+
+#variables
+coords = []
+num_sides = 4
+side_length = 100
+offset = 50
+
+#calculating sides (will figure out later)
+# theta = (2.0 * math.pi * side_length) / num_sides
+# print(theta)
+
+#colors rgb (r,g,b) codes
+black = (0, 0, 0)
+pink = (255, 0, 225)
+red = (227, 0, 0)
+aquamarine = (126,255,212)
+blue = (0, 21, 255)
+green = (28, 224, 25)
+white = (255, 255, 255)
+
+#shapes coordinates
+triangle = [(110,175),(200,20),(290,175)]
+square = [(150,50),(150,150),(250,150),(250,50)]
+#circle coordinates below
+center = (200,100)
+radius = 80
+width = 300
+hexagon = [(235,35),(271,97),(235,159),(163,159),(127,97),(163,35)]
+nonagon = [(200,164),(160,148),(135,109),(143,65),(177,36),(223,36),(257,65),(265,110),(242,148)]
+
+#drawing equilateral triangle
+window.fill(black)
+pygame.draw.polygon(window, pink, triangle)
+pygame.display.update()
+pygame.time.wait(3000)
 
 #drawing square
-pygame.draw.polygon(window, pygame.Color(255,0,0), [(100,100),(100,200),(200,200),(200,100)])
-
+window.fill(black)
+pygame.draw.polygon(window, red, square)
 pygame.display.update()
-pygame.time.wait(1000)
+pygame.time.wait(3000)
+
+#drawing hexagon
+window.fill(black)
+pygame.draw.polygon(window, blue, hexagon)
+pygame.display.update()
+pygame.time.wait(3000)
+
+#drawing nonagon (ask if flipped is fine)
+window.fill(black)
+pygame.draw.polygon(window, green, nonagon)
+pygame.display.update()
+pygame.time.wait(3000)
 
 #drawing circle
-window.fill("aquamarine")
-
-pygame.draw.circle(window, pygame.Color("orange"), (100,100), 50, 300)
-
-
+window.fill(black)
+pygame.draw.circle(window, aquamarine, center, radius, width)
 pygame.display.update()
-pygame.time.wait(1000)
+pygame.time.wait(3000)
 
-#draw triangle
-window.fill((255, 255, 255))
-# pygame.draw.polygon(window, "BLACK", [[100, 100], [0, 200], [200, 200]], 5)
-pygame.draw.polygon(window, color=("red"), points=[(50,100), (100,50), (150,100)])
-
-pygame.display.update()
-pygame.time.wait(1000)
-
-#using the code below so pygame doesn't close unless you close it
+#pygame looping code so won't close
 running = True
 while running:
   for event in pygame.event.get():
@@ -103,5 +120,6 @@ while running:
       running = False
     if running == False:
       pygame.quit()
+
 
 # window.exitonclick()
