@@ -53,7 +53,7 @@ leonardo.goto(-100,-20)
 pygame.init()
 window = pygame.display.set_mode()
 
-#variables
+#variables (not sure what to do with these)
 coords = []
 num_sides = 4
 side_length = 100
@@ -112,7 +112,7 @@ pygame.draw.circle(window, aquamarine, center, radius, width)
 pygame.display.update()
 pygame.time.wait(3000)
 
-#pygame looping code so won't close
+#pygame looping code so it won't close
 running = True
 while running:
   for event in pygame.event.get():
