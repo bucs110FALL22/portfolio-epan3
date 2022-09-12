@@ -5,6 +5,8 @@ import math
 
 #Part A
 window = turtle.Screen() # 2.  Create a screen
+window.screensize()
+window.setup(width=1.0, height=1.0, startx=None, starty=None)
 window.bgcolor('lightblue')
 
 
@@ -66,9 +68,9 @@ offset = 50
 #colors rgb (r,g,b) codes
 black = (0, 0, 0)
 pink = (255, 0, 225)
-red = (227, 0, 0)
+red = (255, 0, 0)
 aquamarine = (126,255,212)
-blue = (0, 21, 255)
+blue = (0, 0, 255)
 green = (28, 224, 25)
 white = (255, 255, 255)
 

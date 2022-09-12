@@ -12,7 +12,7 @@ angle = 360 / sides
 angle = int(angle)
 
 #ask user to enter the color
-colors = input("Enter the color of shape: ")
+colors = input("Enter the color for the shape: ")
 
 #creating turtle object
 turtle.shape("turtle")
