@@ -1,3 +1,4 @@
+
 import random
 #Part A
 #setting variables
@@ -28,16 +29,18 @@ print(cost_per_class, type(cost_per_class))
 #Part B
 #list of data objects [int(s), float(s), and string(s)]
 ##all integer variables
-integer = 5
-integer1 = 10
-##all float variables
-float = 1.00
-float1 = 2.00
-##all string variables
-string = "Hi"
-string1 = "Howdy"
+# integer = 5
+# integer1 = 10
+# ##all float variables
+# float = 1.00
+# float1 = 2.00
+# ##all string variables
+# string = "Hi"
+# string1 = "Howdy"
 #saving list of choices in choice variable
-choice = (integer,float,string,integer1,float1,string1)
+choice = (5,10,1.00,2.00,"Hi","Howdy") 
+#values in lists can be directly inputted and do not need to be define
+# choice = (integer,float,string,integer1,float1,string1)
 #using "random.choice" to randomly choose a result
 result = random.choice(choice)
 #printing & generating the random result

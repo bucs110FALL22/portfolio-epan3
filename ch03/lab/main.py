@@ -6,6 +6,7 @@ import math
 #Part A
 window = turtle.Screen() # 2.  Create a screen
 window.screensize()
+#makes turtle screen full screen found online stackOverflow
 window.setup(width=1.0, height=1.0, startx=None, starty=None)
 window.bgcolor('lightblue')
 
