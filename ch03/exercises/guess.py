@@ -22,9 +22,13 @@ while guess != number:
     guess = input("Guess the random number: ")
     guess = int(guess)
     attempt += 1
-attempt += 1
+else:
+  attempt += 1
+  print("Correct!")
+  print ("You guessed the number in", attempt, "tries.")
+# attempt += 1
 
-#if it satisfies while loop then prints correct
-print("Correct!")
-#prints number of attempts it took the user
-print ("You guessed the number in", attempt, "tries.")
+# #if it satisfies while loop then prints correct
+# print("Correct!")
+# #prints number of attempts it took the user
+# print ("You guessed the number in", attempt, "tries.")
