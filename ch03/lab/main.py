@@ -189,6 +189,36 @@ while running:
 #   pygame.display.update()
 #   pygame.time.wait(3000)
 
+##### Figured out how to change color in loop for shapes
+# #variable for changing colors in if statements
+# count = 0
+
+# for x in [3,4,6,9,360]:
+#   num_sides = x
+#   coords = []
+#   side_length = 100
+#   offset = 120
+#   for i in range(x):
+#     theta = (2.0 * math.pi * i) / num_sides
+#     x = side_length * math.cos(theta) + offset
+#     y = side_length * math.sin(theta) + offset
+#     coords += ((x,y),)
+#   window.fill(black)
+#   if count == 0:
+#     pygame.draw.polygon(window, pink, coords)
+#   elif count == 1:
+#     pygame.draw.polygon(window, red, coords)
+#   elif count == 2:
+#     pygame.draw.polygon(window, blue, coords)
+#   elif count == 3:
+#     pygame.draw.polygon(window, green, coords)
+#   elif count == 4:
+#     pygame.draw.polygon(window, aquamarine, 
+#     coords)
+#   pygame.display.update()
+#   pygame.time.wait(3000)
+#   count += 1
+
 # # window.exitonclick()
 
 #In case I need the things below I'll leave them here
