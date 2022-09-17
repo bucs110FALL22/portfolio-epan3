@@ -173,6 +173,22 @@ while running:
       pygame.quit()
 #make sure to click on the 'X' to close the program
 
+#shorter loop for shapes but doesn't change color
+# for x in [3,4,6,9,360]:
+#   num_sides = x
+#   coords = []
+#   side_length = 100
+#   offset = 120
+#   for i in range(x):
+#     theta = (2.0 * math.pi * i) / num_sides
+#     x = side_length * math.cos(theta) + offset
+#     y = side_length * math.sin(theta) + offset
+#     coords += ((x,y),)
+#   window.fill(black)
+#   pygame.draw.polygon(window, pink, coords)
+#   pygame.display.update()
+#   pygame.time.wait(3000)
+
 # # window.exitonclick()
 
 #In case I need the things below I'll leave them here
