@@ -1,7 +1,7 @@
 import random
 
 #generating random number
-number = random.randrange(1,10)
+number = random.randrange(1,11)
 
 #variables
 attempt = 0
@@ -10,6 +10,7 @@ count = 3
 #asking user for input
 guess = input("Guess the random number: ")
 guess = int(guess)
+attempt += 1
 
 #while loop for guessing game
 while guess != number:
@@ -19,20 +20,20 @@ while guess != number:
     guess = int(guess)
     attempt += 1
     if attempt >= count:
-      print("you lose")
+      print("Game Over.")
       break
   elif guess > number:
-    print("Too High.")
+    print("To High.")
     guess = input("Guess the random number: ")
     guess = int(guess)
     attempt += 1
     if attempt >= count:
-      print("you lose")
+      print("Game Over.")
       break
 else:
   attempt += 1
   print("Correct!")
-  print ("You guessed the number in", attempt, "tries.")
+  # print ("You guessed the number in", attempt, "tries.")
 
 # attempt += 1
 
