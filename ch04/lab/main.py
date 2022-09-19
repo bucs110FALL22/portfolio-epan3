@@ -1,6 +1,7 @@
 #importing modules
 import random
 import pygame
+import math
 
 #setup for pygame and display
 screen_width = 228
@@ -20,6 +21,7 @@ black = (0,0,0)
 blue = (0,0,255)
 red = (255,0,0)
 green = (0,255,0)
+yellow = (255, 255, 0)
 
 #circular dart coordinates below
 center = (115,112)
@@ -40,15 +42,29 @@ pygame.draw.polygon(window, black, yline)
 pygame.display.update()
 
 #Part B)
-dart1 = random.randrange(0,screen_width)
-dart2 = random.randrange(0,screen_height)
-print(dart1, dart2)
-center1 = (dart1,dart2)
-radius1 = (1)
-
 for i in range(10):
-  pygame.draw.circle(window, green, center1, radius1,width)
-  pygame.display.update()
+  #random dart (x,y) dar values
+  dartx = random.randrange(0,screen_width)
+  darty = random.randrange(0,screen_height)
+  #settings variables to draw circle
+  center1 = (dartx,darty)
+  radius1 = 2.5
+  center1 = (dartx,darty)
+  #determining if lands in circle
+  xdistance = screen_width - dartx
+  ydistance = screen_height - darty
+  distance_from_center = math.hypot(xdistance, ydistance)
+  screen_size = (screen_width * screen_height) / 2
+  is_in_circle = distance_from_center <= screen_size
+  not_in_circle = distance_from_center > screen_size
+  if is_in_circle:
+    pygame.draw.circle(window, green, center1, radius1, width)
+    pygame.display.update()
+  else:
+    pygame.draw.circle(window, yellow, center1, radius1, 
+    width)
+    pygame.display.update()
+  
   
 #pygame looping code so it won't close found online
 #make sure to click on the 'X' to close the program
