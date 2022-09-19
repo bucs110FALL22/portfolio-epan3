@@ -19,6 +19,7 @@ print(x,y)
 black = (0,0,0)
 blue = (0,0,255)
 red = (255,0,0)
+green = (0,255,0)
 
 #circular dart coordinates below
 center = (115,112)
@@ -42,7 +43,11 @@ pygame.display.update()
 dart1 = random.randrange(0,screen_width)
 dart2 = random.randrange(0,screen_height)
 print(dart1, dart2)
-
+center1 = (dart1,dart2)
+radius1 = (1)
+for i in range(10):
+  pygame.draw.circle(window, green, center1, radius1,width)
+  pygame.display.update()
 #pygame looping code so it won't close found online
 #make sure to click on the 'X' to close the program
 running = True
