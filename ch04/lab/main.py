@@ -45,9 +45,11 @@ dart2 = random.randrange(0,screen_height)
 print(dart1, dart2)
 center1 = (dart1,dart2)
 radius1 = (1)
+
 for i in range(10):
   pygame.draw.circle(window, green, center1, radius1,width)
   pygame.display.update()
+  
 #pygame looping code so it won't close found online
 #make sure to click on the 'X' to close the program
 running = True
