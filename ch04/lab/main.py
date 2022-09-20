@@ -5,7 +5,7 @@ import math
 
 #setup for pygame and display
 screen_width = 228
-screen_height = 246
+screen_height = 225
 
 pygame.init()
 window = pygame.display.set_mode((screen_width,screen_height))
@@ -64,7 +64,6 @@ for i in range(10):
     pygame.draw.circle(window, yellow, center1, radius1, 
     width)
     pygame.display.update()
-  
   
 #pygame looping code so it won't close found online
 #make sure to click on the 'X' to close the program
