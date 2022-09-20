@@ -51,8 +51,8 @@ for i in range(10):
   radius1 = 2.5
   center1 = (dartx,darty)
   #determining if lands in circle
-  xdistance = screen_width - dartx
-  ydistance = screen_height - darty
+  xdistance = dartx - 115
+  ydistance = darty - 112
   distance_from_center = math.hypot(xdistance, ydistance)
   screen_size = (screen_width * screen_height) / 2
   is_in_circle = distance_from_center <= screen_size
