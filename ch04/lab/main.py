@@ -42,8 +42,9 @@ pygame.draw.polygon(window, black, yline)
 pygame.display.update()
 
 #Part B)
+dartWidth = 0
 for i in range(10):
-  #random dart (x,y) dar values
+  #random dart (x,y) dart values
   dartx = random.randrange(0,screen_width)
   darty = random.randrange(0,screen_height)
   #settings variables to draw circle
@@ -54,16 +55,18 @@ for i in range(10):
   xdistance = dartx - 115
   ydistance = darty - 112
   distance_from_center = math.hypot(xdistance, ydistance)
-  screen_size = (screen_width * screen_height) / 2
+  screen_size = radius#(screen_width * screen_height) / 2
   is_in_circle = distance_from_center <= screen_size
   not_in_circle = distance_from_center > screen_size
   if is_in_circle:
-    pygame.draw.circle(window, green, center1, radius1, width)
+    pygame.draw.circle(window, green, center1, radius1, dartWidth)
     pygame.display.update()
+    pygame.time.wait(1000)
   else:
     pygame.draw.circle(window, yellow, center1, radius1, 
-    width)
+    dartWidth)
     pygame.display.update()
+    pygame.time.wait(1000)
   
 #pygame looping code so it won't close found online
 #make sure to click on the 'X' to close the program
