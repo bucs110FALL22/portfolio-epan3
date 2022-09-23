@@ -63,8 +63,9 @@ pygame.draw.polygon(window, black, yline)
 pygame.display.update()
 
 # Player selection using mouse click event loop
-# input("Click to select Player Blue or Player Red\nAfter clicking, press on the enter key to continue...")
 input("{}Click on screen to select Player {}{}Blue{}{} or Player {}{}Red{}{}\nAfter clicking, press {}{}enter{}{} to continue...{}".format(bcolors.GREEN, bcolors.ENDC, bcolors.BLUE, bcolors.ENDC, bcolors.GREEN, bcolors.ENDC, bcolors.RED, bcolors.ENDC,bcolors.MAGENTA, bcolors.ENDC, bcolors.WHITE, bcolors.ENDC, bcolors.MAGENTA, bcolors.ENDC))
+
+# Detecting the player's selection
 open = True
 while open:
   for event in pygame.event.get():
@@ -317,4 +318,5 @@ while running:
 # if position <= (115, 112): 
 # if event.type == pygame.MOUSEBUTTONUP:
 #   break
-        
+
+# input("Click to select Player Blue or Player Red\nAfter clicking, press on the enter key to continue...")
