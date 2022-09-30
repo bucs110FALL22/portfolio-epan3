@@ -38,13 +38,19 @@ michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
 
 #generating new distances for each turtle
-new_distance = random.randrange(0,10)
-new_distance1 = random.randrange(0,10)
+# new_distance = random.randrange(0,10) #move this inside for loop (so that it is random)
+# new_distance1 = random.randrange(0,10) #move this inside for loop so that it is random)
 
 #using range for for loop
 for i in range(10):
+  #generating new distances for each turtle
+  new_distance = random.randrange(0,10)
+  new_distance1 = random.randrange(0,10)
+  #turtle moving random amount of distances
   michelangelo.forward(new_distance)
   leonardo.forward(new_distance1)
+  print(new_distance) #test for random numbers
+  print(new_distance1) #test for random numbers
   
 #resetting their position
 michelangelo.goto(-100,20)
