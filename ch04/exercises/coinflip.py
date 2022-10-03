@@ -10,15 +10,25 @@ my_turtle.shape("turtle")
 # setting outside variable for while loop
 outside = False
 
+print(turtle.screensize())
+
+position = my_turtle.pos()
+
+
 while not outside:
   coin = random.randrange(0,2)
   if coin == 1:
-    turtle.left(90)
+    my_turtle.left(90)
     coin = "heads"
+    if abs(my_turtle.pos()) < 400: 
+      break
   else:
     coin = "tails"
-    turtle.right(90)
-  turtle.forward(50)
+    my_turtle.right(90)
+    # if abs(position) < 1: 
+    #   break
+  my_turtle.forward(50)
+  
 
 print(coin)
 ### Write a program that behaves in the following way:
