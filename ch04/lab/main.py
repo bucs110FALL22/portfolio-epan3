@@ -87,6 +87,7 @@ dartWidth = 0
 score_red = 0
 score_blue = 0
 round = 0
+
 for i in range(10):
   round += 1
   ## blue player dart for loop
