@@ -10,27 +10,34 @@ my_turtle.shape("turtle")
 # setting outside variable for while loop
 outside = False
 
-print(turtle.screensize())
+screensize = turtle.screensize()
+print(screensize)
 
 position = my_turtle.pos()
 
-
 while not outside:
+  value = my_turtle.xcor() + my_turtle.ycor()
   coin = random.randrange(0,2)
   if coin == 1:
     my_turtle.left(90)
     coin = "heads"
-    if abs(my_turtle.pos()) < 400: 
+    print(coin)
+    if my_turtle.xcor() <= -200 or my_turtle.xcor() >= 200: 
+      outside = True
+      print("outside")
       break
   else:
     coin = "tails"
+    print(coin)
     my_turtle.right(90)
-    # if abs(position) < 1: 
-    #   break
+    if my_turtle.ycor() <= -150 or my_turtle.ycor() >= 150: 
+      outside = True
+      print("outside")
+      break
   my_turtle.forward(50)
   
 
-print(coin)
+# print(coin)
 ### Write a program that behaves in the following way:
 # A turtle begins in the center of the screen.
 # Flip a coin. 
