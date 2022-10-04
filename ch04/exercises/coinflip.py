@@ -2,19 +2,20 @@
 import turtle
 import random
 
+# setting turtle to a variable
 my_turtle = turtle.Turtle()
 
-# creating turtle & compile
+# creating turtle shape
 my_turtle.shape("turtle")
-
-# setting outside variable for while loop
-outside = False
 
 # printing screensize (x,y) coordinate & setting boundaries
 screensize = turtle.screensize()
 print(screensize)
 xBound = screensize[0]//2
 yBound = screensize[1]//2
+
+# setting outside variable for while loop
+outside = False
 
 # while loop
 while not outside:
@@ -38,6 +39,13 @@ while not outside:
       break
   my_turtle.forward(50)
 
+#waits for the click before closing
+window = turtle.Screen()
+window.exitonclick()
+### ^ not sure if the above is needed ###
+
+
+### Lab instructions are located below for convenience.
 # print(coin)
 ### Write a program that behaves in the following way:
 # A turtle begins in the center of the screen.
@@ -56,7 +64,3 @@ while not outside:
 # Use an if statement to determine the direction the turtle should turn
 # move forward
 # calculate if the turtle's position is on screen again
-
-#waits for the click before closing
-window = turtle.Screen()
-window.exitonclick()
