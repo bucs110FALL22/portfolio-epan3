@@ -10,19 +10,21 @@ my_turtle.shape("turtle")
 # setting outside variable for while loop
 outside = False
 
+# printing screensize (x,y) coordinate & setting boundaries
 screensize = turtle.screensize()
 print(screensize)
+xBound = screensize[0]//2
+yBound = screensize[1]//2
 
-position = my_turtle.pos()
-
+# while loop
 while not outside:
-  value = my_turtle.xcor() + my_turtle.ycor()
+  print(my_turtle.pos())
   coin = random.randrange(0,2)
   if coin == 1:
     my_turtle.left(90)
     coin = "heads"
     print(coin)
-    if my_turtle.xcor() <= -200 or my_turtle.xcor() >= 200: 
+    if my_turtle.xcor() <= -xBound or my_turtle.xcor() >= xBound: 
       outside = True
       print("outside")
       break
@@ -30,12 +32,11 @@ while not outside:
     coin = "tails"
     print(coin)
     my_turtle.right(90)
-    if my_turtle.ycor() <= -150 or my_turtle.ycor() >= 150: 
+    if my_turtle.ycor() <= -yBound or my_turtle.ycor() >= yBound: 
       outside = True
       print("outside")
       break
   my_turtle.forward(50)
-  
 
 # print(coin)
 ### Write a program that behaves in the following way:
