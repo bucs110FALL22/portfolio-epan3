@@ -1,5 +1,3 @@
-import pygame
-
 ### Part A
 # variables
 n = 101
@@ -71,6 +69,8 @@ pygame.init()
 display = pygame.display.set_mode()
 
 # settings colors
+white = [255,255,255]
+black = [0,0,0]
 green = [0,255,0]
 
 # vairables
@@ -81,19 +81,24 @@ max_val = 0
 scale = 5
 
 # iters = zip(iters.values(), iters.keys())
-pairs = [(v, k) for (k, v) in iters.items()]
+pairs = [(x, y) for (x, y) in iters.items()]
 print(pairs)
+
+# fill the screen with color
+display.fill(black)
 
 # drawing graph
 pygame.draw.lines(display, green, False, pairs)
 new_display = pygame.transform.flip(display, False, True)
-display.blit(new_display , (0, 0))
+new_ddisplay = pygame.transform.scale(new_display, (500,500))
+new_display.blit(new_display, (0, 0))
 pygame.display.update()
 
 # setting font
-font = pygame.font.Font(None, 12)
+font = pygame.font.Font(None, 20)
 msg = font.render("test", False, "blue")
 display.blit(msg, (10,10))
+pygame.display.update()
 
 # for loop
 for n in range(2, upper_limit):
