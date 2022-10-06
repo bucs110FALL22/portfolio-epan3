@@ -90,7 +90,7 @@ display.fill(black)
 # drawing graph
 pygame.draw.lines(display, green, False, pairs)
 new_display = pygame.transform.flip(display, False, True)
-new_ddisplay = pygame.transform.scale(new_display, (500,500))
+new_display = pygame.transform.scale(new_display, (500,500))
 new_display.blit(new_display, (0, 0))
 pygame.display.update()
 
