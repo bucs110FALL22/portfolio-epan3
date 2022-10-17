@@ -21,14 +21,28 @@ Given what you have learned about classes on Chapter 6, describe the ***interfac
 
 Come up with interfaces fot 3 possible classes you think you may need. Again, brainstorm a little. Nothing is *wrong*.
 
-## Class Interface 1
+## Movement Interface
 
-< add your interface >
+* class user
+    * moveLeft()
+    * moveRight()
+    * moveForward()
 
-## Class Interface 2
+***
 
-< add your interface >
+## Choices Interface
 
-## Class Interface 3
+* class keyboard
+    * choicedown()
+    * choiceup()
+    * enter()
 
-< add your interface >
+***
+## Jumping Interface
+
+* class jump
+    * jumpUp()
+    * jumpDown()
+    * stop()
+
+***
