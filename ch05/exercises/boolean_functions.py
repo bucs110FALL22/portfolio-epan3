@@ -12,8 +12,32 @@ def percentage_to_letter(score=0):
     print("A")
   return score
 inputscore = float(input("Enter your exam percentage: "))
-result = percentage_to_letter(score=inputscore)
-print(result)
+percentage_to_letter(inputscore)
+
+def is_passing(letter = None):
+  
+  if letter == "A":
+    print("True")
+    return True
+  elif letter == "B":
+    print("True")
+    return True
+  elif letter == "C":
+    print("True")
+    return True
+  elif letter == "D":
+    print("False")
+    return False
+  elif letter == "F":
+    print("False")
+    return False
+
+inputletter = input("Enter your single letter grade: ")
+is_passing(inputletter)
+
+  
+
+
 
 
     
