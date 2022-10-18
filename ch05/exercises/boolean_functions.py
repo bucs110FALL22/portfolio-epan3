@@ -10,10 +10,6 @@ def percentage_to_letter(score=0):
     return "B"
   elif score >= 90:
     return "A"
-  return score
-inputscore = float(input("Enter your exam percentage: "))
-result = percentage_to_letter(inputscore)
-print(result)
 
 def is_passing(letter = None):
   
@@ -28,14 +24,9 @@ def is_passing(letter = None):
   elif letter == "F":
     return False
 
-inputletter = input("Enter your single letter grade: ")
-result = is_passing(inputletter)
+inputscore = float(input("Enter your exam percentage: "))
+result = percentage_to_letter(inputscore)
 print(result)
 
-  
-
-
-
-
-    
-  
+result = is_passing(result)
+print(result)
