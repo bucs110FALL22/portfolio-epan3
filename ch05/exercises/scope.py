@@ -12,8 +12,13 @@ def exponent(num, exp):
     result = result * num
   return result
 
+# using multiplication to square
 def square(num):
   return multiply(num, num)
+
+# using exponent to square
+def square1(num):
+  return exponent(num, 2)
 
 def main():
   num1 = int(input("Enter 1st number to multiply: "))
@@ -29,6 +34,10 @@ def main():
   base1 = int(input("Enter base number to square: "))
   result = square(base1)
   print(result)
+
+  base2 = int(input("Enter base number to square: "))
+  result2 = square1(base2)
+  print(result2)
 main()
 
 
