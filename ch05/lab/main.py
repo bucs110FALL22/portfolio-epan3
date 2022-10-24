@@ -1,3 +1,5 @@
+import pygame
+
 ### Part A
 # variables
 n = 101
@@ -59,8 +61,6 @@ threeplus1_iters_dict = iters
 print("\n", threeplus1_iters_dict)
 
 ### Part C
-# import pygame
-import pygame
 
 # initialize pygame
 pygame.init()
