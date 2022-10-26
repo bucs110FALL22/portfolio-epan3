@@ -40,6 +40,14 @@ window.exitonclick()
 # for s in range(2):
 #     franklin.forward(width)
 #     franklin.right(90)
+
 #     franklin.forward(length)
 #     franklin.right(90)
+
+
+
+
+
+
+
 # wn.exitonclick()

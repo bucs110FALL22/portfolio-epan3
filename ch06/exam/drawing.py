@@ -5,6 +5,27 @@ def fullscreen(window = None, width = 0, height = 0, startx = None, starty = Non
   window.setup(width, height, startx, starty)
   window.bgcolor('black')
 
+def moon(turtle = None, color=None, xcoord=0, ycoord=0, size=0):
+  turtle.up()
+  turtle.goto(xcoord,ycoord)
+  turtle.color(color)
+  turtle.begin_fill()
+  turtle.circle(size)
+  turtle.end_fill()
+  
+  turtle.goto(xcoord+20,ycoord)
+  turtle.color('black')
+  turtle.begin_fill()
+  turtle.circle(size)
+  turtle.end_fill()
+  turtle.hideturtle()
+
+def star(turtle = None, color = None, loop = 0, units = 0, angle = 0):
+  turtle.color(color)
+  for i in range(loop):
+    turtle.forward(units)
+    turtle.right(angle)
+  
 # draws letter E
 def letter(turtle=None, color = None, size = 0, units = 0, angle = 0):
   # puts pen on paper & sets position (x, y) coordinates
@@ -55,36 +76,32 @@ def bluefireworks(turtle,color):
 def greenfireworks(turtle,color):
   return fireworks(turtle,color,16,19)
 
-def moon(turtle = None,bgcolor=None,color=None,xcoord=0,ycoord=0,size=0):
-  turtle.bgcolor(bgcolor)
-  turtle.up()
-  turtle.goto(xcoord,ycoord)
-  turtle.color(color)
-  turtle.begin_fill()
-  turtle.circle(size)
-  turtle.end_fill()
-  
 def main():
   screen = turtle.Screen()
   screen.screensize()
   fullscreen(screen, width = 1.0, height = 1.0, startx=None, starty=None)
 
-  COLORS = ['#4287f5','#9ed7ff','#fcec03','#FF0000','#00fffb','#00ff51']
-  SIZE = 20
-  UNITS = [60,100,16]
-  ANGLE = [90,174]
   coby = turtle.Turtle()
-
-  moon(coby,'blue','orange',0,-200,200) 
   
-  coby.speed(10)
-  circle(coby, COLORS[0], UNITS[1])
-  letter(coby, COLORS[1], SIZE, UNITS[0], ANGLE[0])
+  COLORS = ['#4287f5','#9ed7ff','#fcec03','#FF0000','#00fffb','#00ff51','#f0c420']
+  SIZE = [20,40]
+  UNITS = [60,100,16]
+  ANGLE = [90,174,144]
+  XCOORD = -180
+  YCOORD = 80
+  LOOP = [19,5]
 
-  LOOP = 19
+  moon(coby,COLORS[6],XCOORD,YCOORD,SIZE[1]) 
+
+  star(coby, COLORS[6], LOOP[1], UNITS[1],ANGLE[2])
+  
+  coby.speed(300)
+  circle(coby, COLORS[0], UNITS[1])
+  letter(coby, COLORS[1], SIZE[0], UNITS[0], ANGLE[0])
+
   coby.setpos(-10,80)
   coby.speed(300)
-  fireworks(coby,COLORS[2],UNITS[2],LOOP)
+  fireworks(coby,COLORS[2],UNITS[2],LOOP[0])
 
   coby.speed(300)
   coby.setpos(-10,-86)
