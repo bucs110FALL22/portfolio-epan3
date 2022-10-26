@@ -44,23 +44,39 @@ def fireworks(turtle = None, color = None, units = 0, loop = 0):
     turtle.left(170)
     turtle.forward(units)
     turtle.end_fill()
+    turtle.hideturtle()
+  
+def redfireworks(turtle,color):
+  return fireworks(turtle,color,16,19)
 
-def redfireworks(color):
-  coby = turtle.Turtle()
-  coby.speed(300)
-  coby.setpos(-10,-100)
-  return fireworks(coby,color,10,19)
+def bluefireworks(turtle,color):
+  return fireworks(turtle,color,16,19)
+
+def greenfireworks(turtle,color):
+  return fireworks(turtle,color,16,19)
+
+def moon(turtle = None,bgcolor=None,color=None,xcoord=0,ycoord=0,size=0):
+  turtle.bgcolor(bgcolor)
+  turtle.up()
+  turtle.goto(xcoord,ycoord)
+  turtle.color(color)
+  turtle.begin_fill()
+  turtle.circle(size)
+  turtle.end_fill()
   
 def main():
   screen = turtle.Screen()
   screen.screensize()
   fullscreen(screen, width = 1.0, height = 1.0, startx=None, starty=None)
 
-  COLORS = ['#4287f5','#9ed7ff','#fcec03']
+  COLORS = ['#4287f5','#9ed7ff','#fcec03','#FF0000','#00fffb','#00ff51']
   SIZE = 20
-  UNITS = [60,100,20]
-  ANGLE = [90,170]
+  UNITS = [60,100,16]
+  ANGLE = [90,174]
   coby = turtle.Turtle()
+
+  moon(coby,'blue','orange',0,-200,200) 
+  
   coby.speed(10)
   circle(coby, COLORS[0], UNITS[1])
   letter(coby, COLORS[1], SIZE, UNITS[0], ANGLE[0])
@@ -69,8 +85,20 @@ def main():
   coby.setpos(-10,80)
   coby.speed(300)
   fireworks(coby,COLORS[2],UNITS[2],LOOP)
+
+  coby.speed(300)
+  coby.setpos(-10,-86)
+  redfireworks(coby,COLORS[3])
+
+  coby.speed(300)
+  coby.setpos(-80,0)
+  bluefireworks(coby,COLORS[4])
   
-  redfireworks('red')
+  coby.speed(300)
+  coby.setpos(80,0)
+  greenfireworks(coby,COLORS[5])
+
+ 
 
   screen.exitonclick()
 main()
