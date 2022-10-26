@@ -1,14 +1,3 @@
-# CS110 Midterm
-
-Name: Eric Pan
-
-Program Description: Drawing letter E with background.
-
-Known Bugs: Not any at the moment may change later on.
-
-
-(Add the require information below each second level heading, ##. If it doesn't apply, just put Nope.)
-
 # CS110 Midterm Exam
 
 ## SHORT DESCRIPTION *(1 or 2 sentences describing your program)*
