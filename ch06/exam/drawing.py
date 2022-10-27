@@ -1,3 +1,4 @@
+# imports
 import turtle
 
 # maximizes turtle screen size
@@ -5,6 +6,7 @@ def fullscreen(window = None, width = 0, height = 0, startx = None, starty = Non
   window.setup(width, height, startx, starty)
   window.bgcolor('black')
 
+# function drawing moon
 def moon(turtle = None, color=None, xcoord=0, ycoord=0, size=0):
   turtle.up()
   turtle.goto(xcoord,ycoord)
@@ -20,6 +22,7 @@ def moon(turtle = None, color=None, xcoord=0, ycoord=0, size=0):
   turtle.end_fill()
   turtle.hideturtle()
 
+# function drawing star
 def star(turtle = None, color = None, loop = 0, units = 0, angle = 0):
   turtle.color(color)
   turtle.begin_fill()
@@ -28,6 +31,7 @@ def star(turtle = None, color = None, loop = 0, units = 0, angle = 0):
     turtle.right(angle)
   turtle.end_fill()
 
+# function drawing cloud
 def cloud(turtle = None, color = None, loop = 0, units = 0, size = 0):
   turtle.color(color)
   for i in range(loop):
@@ -37,8 +41,18 @@ def cloud(turtle = None, color = None, loop = 0, units = 0, size = 0):
     turtle.circle(size)
     turtle.end_fill()
     turtle.penup()
-  
-# draws letter E
+
+# function drawing icon
+def circle(turtle = None, color = None, units = 0):
+  turtle.color(color)
+  turtle.begin_fill()
+  turtle.penup()
+  turtle.setpos(-2,-100)
+  turtle.pendown()
+  turtle.circle(units)
+  turtle.end_fill()
+    
+# function drawing letter E
 def letter(turtle=None, color = None, size = 0, units = 0, angle = 0):
   # puts pen on paper & sets position (x, y) coordinates
   turtle.pendown()
@@ -60,15 +74,7 @@ def letter(turtle=None, color = None, size = 0, units = 0, angle = 0):
   turtle.forward(units)
   turtle.penup()
 
-def circle(turtle = None, color = None, units = 0):
-  turtle.color(color)
-  turtle.begin_fill()
-  turtle.penup()
-  turtle.setpos(-2,-100)
-  turtle.pendown()
-  turtle.circle(units)
-  turtle.end_fill()
-
+# function drawing fireworks
 def fireworks(turtle = None, color = None, units = 0, loop = 0):
   for i in range(loop):
     turtle.color(color)
@@ -78,23 +84,32 @@ def fireworks(turtle = None, color = None, units = 0, loop = 0):
     turtle.forward(units)
     turtle.end_fill()
     turtle.hideturtle()
-  
+
+# function drawing red fireworks (by returning fireworks())
 def redfireworks(turtle,color):
   return fireworks(turtle,color,16,19)
 
+# function drawing blue fireworks (by returning fireworks())
 def bluefireworks(turtle,color):
   return fireworks(turtle,color,16,19)
 
+# function drawing green fireworks (by returning fireworks())
 def greenfireworks(turtle,color):
   return fireworks(turtle,color,16,19)
 
+# main function
 def main():
+  # creating a screen object
   screen = turtle.Screen()
   screen.screensize()
+
+  # adjusting to full screen
   fullscreen(screen, width = 1.0, height = 1.0, startx=None, starty=None)
 
+  # creating turtle object
   coby = turtle.Turtle()
-  
+
+  # CONSTANT variables for all functions
   COLORS = ['#4287f5','#9ed7ff','#fcec03','#FF0000','#00fffb','#00ff51','#ffd900']
   SIZE = [20,40]
   UNITS = [60,100,16,10]
@@ -103,32 +118,45 @@ def main():
   YCOORD = 80
   LOOP = [19,5]
 
+  # adjusting turtle speed
+  coby.speed(7)
+  
+  # drawing moon
   moon(coby, COLORS[6], XCOORD, YCOORD, SIZE[1]) 
-  coby.goto(-120,120)
+
+  # setting position & drawing star
+  coby.setpos(-120,120)
   star(coby, COLORS[6], LOOP[1], UNITS[3],ANGLE[2])
 
+  # setting position & drawing cloud
   coby.setpos(140,100)
   cloud(coby, "white", LOOP[1], UNITS[3], SIZE[0])
-  
-  coby.speed(300)
+
+  # speeding up drawing
+  coby.speed(8)
+
+  # drawing circular icon
   circle(coby, COLORS[0], UNITS[1])
+
+  # drawing letter E on top of icon
   letter(coby, COLORS[1], SIZE[0], UNITS[0], ANGLE[0])
 
-  coby.setpos(-10,80)
+  # speeding up drawing
   coby.speed(300)
+  
+  # setting position & drawing fireworks  
+  coby.setpos(-10,80)
   fireworks(coby,COLORS[2],UNITS[2],LOOP[0])
 
-  coby.speed(300)
   coby.setpos(-10,-86)
   redfireworks(coby,COLORS[3])
 
-  coby.speed(300)
   coby.setpos(-80,0)
   bluefireworks(coby,COLORS[4])
   
-  coby.speed(300)
   coby.setpos(80,0)
   greenfireworks(coby,COLORS[5])
 
+  # waits for user to click before closing 
   screen.exitonclick()
 main()
