@@ -27,6 +27,16 @@ def star(turtle = None, color = None, loop = 0, units = 0, angle = 0):
     turtle.forward(units)
     turtle.right(angle)
   turtle.end_fill()
+
+def cloud(turtle = None, color = None, loop = 0, units = 0, size = 0):
+  turtle.color(color)
+  for i in range(loop):
+    turtle.pendown()
+    turtle.begin_fill()
+    turtle.forward(units)
+    turtle.circle(size)
+    turtle.end_fill()
+    turtle.penup()
   
 # draws letter E
 def letter(turtle=None, color = None, size = 0, units = 0, angle = 0):
@@ -96,6 +106,9 @@ def main():
   moon(coby, COLORS[6], XCOORD, YCOORD, SIZE[1]) 
   coby.goto(-120,120)
   star(coby, COLORS[6], LOOP[1], UNITS[3],ANGLE[2])
+
+  coby.setpos(140,100)
+  cloud(coby, "white", LOOP[1], UNITS[3], SIZE[0])
   
   coby.speed(300)
   circle(coby, COLORS[0], UNITS[1])
