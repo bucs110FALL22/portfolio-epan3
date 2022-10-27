@@ -4,11 +4,11 @@ import turtle
 # maximizes turtle screen size
 def fullscreen(window = None, width = 0, height = 0, startx = None, starty = None):
   window.setup(width, height, startx, starty)
-  window.bgcolor('black')
+  window.bgcolor('#051b55')
 
 # function drawing moon
-def moon(turtle = None, color=None, xcoord=0, ycoord=0, size=0):
-  turtle.up()
+def moon(turtle = None, color = None, xcoord = 0, ycoord = 0, size = 0):
+  turtle.penup()
   turtle.goto(xcoord,ycoord)
   turtle.color(color)
   turtle.begin_fill()
@@ -16,7 +16,7 @@ def moon(turtle = None, color=None, xcoord=0, ycoord=0, size=0):
   turtle.end_fill()
   
   turtle.goto(xcoord+20,ycoord)
-  turtle.color('black')
+  turtle.color('#051b55')
   turtle.begin_fill()
   turtle.circle(size)
   turtle.end_fill()
@@ -38,7 +38,8 @@ def cloud(turtle = None, color = None, loop = 0, units = 0, size = 0):
     turtle.pendown()
     turtle.begin_fill()
     turtle.forward(units)
-    turtle.circle(size)
+    turtle.circle(size+i)
+    size -= i
     turtle.end_fill()
     turtle.penup()
 
@@ -86,16 +87,20 @@ def fireworks(turtle = None, color = None, units = 0, loop = 0):
     turtle.hideturtle()
 
 # function drawing red fireworks (by returning fireworks())
-def redfireworks(turtle,color):
+def redfireworks(turtle = None, color = None):
   return fireworks(turtle,color,16,19)
 
 # function drawing blue fireworks (by returning fireworks())
-def bluefireworks(turtle,color):
+def bluefireworks(turtle = None, color = None):
   return fireworks(turtle,color,16,19)
 
 # function drawing green fireworks (by returning fireworks())
-def greenfireworks(turtle,color):
+def greenfireworks(turtle = None, color = None):
   return fireworks(turtle,color,16,19)
+
+  def text(turtle = None):
+    turtle.write("Eric Pan", True, align = "center")
+    turtle.write((-50,-50), True)
 
 # main function
 def main():
