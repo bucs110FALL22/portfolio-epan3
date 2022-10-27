@@ -22,9 +22,11 @@ def moon(turtle = None, color=None, xcoord=0, ycoord=0, size=0):
 
 def star(turtle = None, color = None, loop = 0, units = 0, angle = 0):
   turtle.color(color)
+  turtle.begin_fill()
   for i in range(loop):
     turtle.forward(units)
     turtle.right(angle)
+  turtle.end_fill()
   
 # draws letter E
 def letter(turtle=None, color = None, size = 0, units = 0, angle = 0):
@@ -83,17 +85,17 @@ def main():
 
   coby = turtle.Turtle()
   
-  COLORS = ['#4287f5','#9ed7ff','#fcec03','#FF0000','#00fffb','#00ff51','#f0c420']
+  COLORS = ['#4287f5','#9ed7ff','#fcec03','#FF0000','#00fffb','#00ff51','#ffd900']
   SIZE = [20,40]
-  UNITS = [60,100,16]
+  UNITS = [60,100,16,10]
   ANGLE = [90,174,144]
   XCOORD = -180
   YCOORD = 80
   LOOP = [19,5]
 
-  moon(coby,COLORS[6],XCOORD,YCOORD,SIZE[1]) 
-
-  star(coby, COLORS[6], LOOP[1], UNITS[1],ANGLE[2])
+  moon(coby, COLORS[6], XCOORD, YCOORD, SIZE[1]) 
+  coby.goto(-120,120)
+  star(coby, COLORS[6], LOOP[1], UNITS[3],ANGLE[2])
   
   coby.speed(300)
   circle(coby, COLORS[0], UNITS[1])
@@ -114,8 +116,6 @@ def main():
   coby.speed(300)
   coby.setpos(80,0)
   greenfireworks(coby,COLORS[5])
-
- 
 
   screen.exitonclick()
 main()
