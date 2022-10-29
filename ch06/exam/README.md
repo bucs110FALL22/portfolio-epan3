@@ -8,4 +8,5 @@
 Turtle Library Documetation: [https://docs.python.org/3/library/turtle.html]
 
 ## MISCELLANEOUS COMMENTS *(drawing.py is my main drawing, but I also tried doing another drawing on some other repl, but I could not integrate it as the screensize was different (I have more return functions there please let me know if you want to see it)))*
+Here is the link to the other drawing I did with better return functions: [https://replit.com/join/zcfkdobqsb-ericpan7]
 
