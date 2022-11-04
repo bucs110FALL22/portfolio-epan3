@@ -17,32 +17,34 @@ Given what you have learned about classes on Chapter 6, describe the ***interfac
     * moveRight()
     * shoot()
 
+## Scene Interface
+
+* class Scene:
+  * def __init__(self, bgcolor = black, switch_screen = None, screen_width = 640, screen_height = 480):
+    * self.bgcolor = bgcolor
+    * self.screen_width = screen_width
+    * self.screen_height = screen_height
+    * self.switch_screen = switch_screen
 ***
 
-Come up with interfaces fot 3 possible classes you think you may need. Again, brainstorm a little. Nothing is *wrong*.
+## Player Interface
 
-## Movement Interface
-
-* class user
-    * moveLeft()
-    * moveRight()
-    * moveForward()
-
+* class Player:
+  * def __init__(self, xpos = 0, ypos = 1, lives = 3):
+    * self.xpos = xpos
+    * self.ypos = ypos
+    * self.lives = lives
 ***
 
-## Choices Interface
+## Item Interface
 
-* class keyboard
-    * choicedown()
-    * choiceup()
-    * enter()
+* class Item:
+  * def __init__(self, image, xpos = 0, ypos = 0, size = 1):
+    * self.image = image
+    * self.xpos = xpos
+    * self.ypos = ypos
+    * self.size = size
+***    
 
-***
-## Jumping Interface
+========================
 
-* class jump
-    * jumpUp()
-    * jumpDown()
-    * stop()
-
-***
