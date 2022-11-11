@@ -31,3 +31,8 @@ Using the example below, list each model class and its interface
     * __init__
         * < description >
     * < additional methods >
+
+1. < Player > 
+    * __init__
+        * < description >
+    * < additional methods >
