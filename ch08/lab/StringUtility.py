@@ -26,21 +26,7 @@ class StringUtility:
 
   # Cipher Function
   def cipher(self):
-    string = ""
-    for i in self.string:
-      if i.isalpha():
-          if i.isupper():
-              alphabet = (ord(i) - 65 + len(self.string)) % (26)
-              alphabet += 65
-          if i.islower():
-              alphabet = (ord(i) - 97 + len(self.string)) % (26)
-              alphabet += 97
-          letter = chr(alphabet)
-      else:
-          letter = i
-      string += letter
-    return string
-
+    return ''.join([(chr((ord(i) - (65 if i.isupper() else 97) + len(self.string)) % (26) + (65 if i.isupper() else 97)) if i.isalpha() else i) for i in self.string])
 
 
 
