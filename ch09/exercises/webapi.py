@@ -2,7 +2,6 @@ import json
 import requests
 
 def get_results():
-  #hYvqwf2BYs0Dt4YWNDiZScLRad2nvBbc
-  response = requests.get("http://apilayer.net/api/")
-  print(response.status_code)
+  response = requests.get("https://date.nager.at/api/v3/CountryInfo/143")
+  print(response)
 get_results()
