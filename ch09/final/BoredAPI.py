@@ -6,7 +6,7 @@ class BoredAPI:
     '''instance variable: api_url internal stored API url'''
     '''instance variable: contains dictionary values from input received'''
     self.participants = input('Enter # Of Partcipants Activity (must be > 0): ')
-    self.price = float(input('Enter the cost value for the Activity (must be bewteen 0 to 1 as a decimal): '))
+    self.price = float(input('Enter the cost value for the Activity (must be bewteen 0 & 1 (0 being  free, excluding 1)): '))
     self.api_url = 'https://www.boredapi.com/api/activity'
     self.payload = {'participants': {self.participants}, 'price': {self.price}}
     
