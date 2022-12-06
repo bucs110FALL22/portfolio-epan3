@@ -1,33 +1,44 @@
 # String Utility Class
 
+
 class StringUtility:
-  def __init__(self, string):
-    self.string = string
 
-  # String Function
-  def __str__(self):
-    return self.string
+    def __init__(self, string):
+        self.string = string
 
-  # Vowels Function
-  def vowels(self) -> str:
-    return str(len([char for char in self.string if char in "aeiouAEIOU"])) if len([char for char in self.string if char in "aeiouAEIOU"]) < 5 else 'many'
+    # String Function
+    def __str__(self):
+        return self.string
 
-  # Both Ends Function
-  def bothEnds(self):    
-    return "" if len(self.string) <= 2 else self.string[:2] + self.string[-2:]
+    # Vowels Function
+    def vowels(self) -> str:
+        return str(len([
+            char for char in self.string if char in "aeiouAEIOU"
+        ])) if len([char for char in self.string
+                    if char in "aeiouAEIOU"]) < 5 else 'many'
 
-  # Fix Start Function
-  def fixStart(self):
-    return self.string if (len(self.string) <= 1) else self.string[0] + self.string[1:].replace(self.string[0],'*')
+    # Both Ends Function
+    def bothEnds(self):
+        return "" if len(
+            self.string) <= 2 else self.string[:2] + self.string[-2:]
 
-  # ASCII Sum Function
-  def asciiSum(self):
-    return sum([ord(i) for i in self.string])
+    # Fix Start Function
+    def fixStart(self):
+        return self.string if (
+            len(self.string) <= 1
+        ) else self.string[0] + self.string[1:].replace(self.string[0], '*')
 
-  # Cipher Function
-  def cipher(self):
-    return ''.join([(chr((ord(i) - (65 if i.isupper() else 97) + len(self.string)) % (26) + (65 if i.isupper() else 97)) if i.isalpha() else i) for i in self.string])
+    # ASCII Sum Function
+    def asciiSum(self):
+        return sum([ord(i) for i in self.string])
 
+    # Cipher Function
+    def cipher(self):
+        return ''.join([
+            (chr((ord(i) - (65 if i.isupper() else 97) + len(self.string)) %
+                 (26) + (65 if i.isupper() else 97)) if i.isalpha() else i)
+            for i in self.string
+        ])
 
 
 ### Old Code:
@@ -61,7 +72,7 @@ class StringUtility:
 #   def fixStart(self):
 #     if len(self.string) <= 1:
 #       return self.string
-#     else:  
+#     else:
 #       return self.string[0] + self.string[1:].replace(self.string[0],'*')
 
 #   # ASCII Sum Function
@@ -69,7 +80,7 @@ class StringUtility:
 #     sum = 0
 #     for i in self.string:
 #       sum = sum + ord(i)
-#     return sum  
+#     return sum
 
 #   # Cipher Function
 #   def cipher(self):
