@@ -3,6 +3,7 @@ from allproxy import *
 from NumbersAPI import NumbersAPI
 
 def main():
-  BoredProxy()
-  NumbersProxy()
+  Proxy()
+  # BoredProxy()
+  # NumbersProxy()
 main()

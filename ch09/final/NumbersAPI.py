@@ -32,7 +32,7 @@ class NumbersAPI:
         self.formatted = "\nYour Number: {number}\nNumber Fact: {text}".format(**self.data)
         return self.formatted
       else:
-        result = "\nDoes Not Exist. Try Again."
+        result = "\nNot A Valid Number. Try Again."
         return result
 # api_url = 'http://numbersapi.com/random/math?json'
 # http://numbersapi.com/{number}/math?json

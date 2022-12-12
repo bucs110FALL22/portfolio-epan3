@@ -31,7 +31,7 @@ class BoredAPI:
       self.formatted = "\nActivity: {activity}\nType: {type}\nPeople: {participants}\nPrice: {price}\nAccessibility: {accessibility}".format(**self.data)
       return self.formatted
     else:
-      result = "\nDoes Not Exist. Try Again."
+      result = "\nActivity Does Not Exist. Try Again."
       return result
     
 # api_url = 'https://www.boredapi.com/api/activity?typerecreational&activity?participants=1'
