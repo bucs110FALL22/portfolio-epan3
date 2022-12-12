@@ -1,9 +1,5 @@
-from BoredAPI import BoredAPI
-from allproxy import *
-from NumbersAPI import NumbersAPI
+from allproxy import Proxy
 
 def main():
   Proxy()
-  # BoredProxy()
-  # NumbersProxy()
 main()
